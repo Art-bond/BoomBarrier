@@ -1,0 +1,2 @@
+rootProject.name = "Boom barrier"
+include ':app'
