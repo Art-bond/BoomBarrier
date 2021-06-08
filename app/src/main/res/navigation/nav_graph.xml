@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/barrierListFragment">
 
+    <fragment
+        android:id="@+id/barrierListFragment"
+        android:name="ru.d3st.boombarrier.overview.BarrierListFragment"
+        android:label="fragment_barrier_list"
+        tools:layout="@layout/fragment_barrier_list" >
+        <action
+            android:id="@+id/action_barrierListFragment_to_fragmentAddBarrier"
+            app:destination="@id/fragmentAddBarrier" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddBarrier"
+        android:name="ru.d3st.boombarrier.detail.FragmentAddBarrier"
+        android:label="FragmentAddBarrier" />
 </navigation>
